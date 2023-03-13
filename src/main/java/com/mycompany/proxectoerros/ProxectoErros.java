@@ -5,6 +5,8 @@
 
 package com.mycompany.proxectoerros;
 
+import java.util.Scanner;
+
 /**
  *
  * @author a22laurall
@@ -13,12 +15,13 @@ public class ProxectoErros {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
-        int num = 789;
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
         int resto;
         int numInvertido = 0;
         
         while(num!=0){
-            resto = num/10;
+            resto = num%10;
             numInvertido = numInvertido * 10 + resto;
             num/=10;
         }
